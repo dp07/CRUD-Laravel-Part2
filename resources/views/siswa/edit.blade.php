@@ -13,7 +13,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-sm-8">
-                                    <form action="/siswa/{{$siswa->id}}/update" method="post">
+                                    <form action="/siswa/{{$siswa->id}}/update" method="post" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group">
                                             <label for="nama_depan">Nama Depan</label>
@@ -37,6 +37,10 @@
                                         <div class="form-group">
                                             <label for="alamat">Alamat</label>
                                             <textarea class="form-control" id="alamat" rows="3" name="alamat">{{$siswa->alamat}}</textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="avatar">Avatar</label>
+                                            <input type="file" id="avatar" name="avatar">
                                         </div>
 
                                         <button type="submit" class="btn btn-primary float-right">Edit</button>
